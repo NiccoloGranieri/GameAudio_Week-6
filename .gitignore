@@ -1,6 +1,24 @@
-# This .gitignore file should be placed at the root of your Unity project directory
-#
-# Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
+# This .gitignore file has been modifies to be placed outside the Unity project folder and the FMOD Studio project folder.
+# The folder structure expected is:
+# 
+# .gitignore
+# Game/
+# ├── Assets/
+# ├── Library/
+# ├── Logs/
+# ├── Packages/
+# ├── ProjectSettings/
+# ├── UserSettings/
+# FMOD/
+# ├── Assets/
+# ├── Build/
+# ├── FMOD.fspro
+# ├── Metadata/
+# ├── Plugins/
+# 
+# Where "Game" is the folder containing the Unity project and "FMOD" is the folder containing the FMOD Studio project.
+# If you named your Unity project anything other than Game, replace every instance of "Game" with the name of your project.
+# The same applies to the FMOD Studio project folder.
 #
 Game/[Ll]ibrary/
 Game/[Tt]emp/
@@ -58,10 +76,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-# macOS Garbage Files
-
-.DS_Store
-
 # FMOD Unity Plugin Ignore
 
 # Never ignore DLLs in the FMOD subfolder.
@@ -81,3 +95,11 @@ Game/[Aa]ssets/StreamingAssets/**/*.bank.meta
 # If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
 # Log files can be ignored.
 fmod_editor.log
+
+# FMOD Studio Project Ignore
+FMOD/.cache
+FMOD/.unsaved
+FMOD/.user
+
+# macOS Garbage Files
+.DS_Store
