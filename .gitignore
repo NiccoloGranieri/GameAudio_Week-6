@@ -61,3 +61,23 @@ crashlytics-build.properties
 # macOS Garbage Files
 
 .DS_Store
+
+# FMOD Unity Plugin Ignore
+
+# Never ignore DLLs in the FMOD subfolder.
+!Game/[Aa]ssets/Plugins/FMOD/**/lib/*
+
+# Don't ignore images and gizmos used by FMOD in the Unity Editor.
+!Game/[Aa]ssets/Gizmos/FMOD/*
+!Game/[Aa]ssets/Editor Default Resources/FMOD/*
+                    
+# Ignore the Cache folder since it is updated locally.
+Game/[Aa]ssets/Plugins/FMOD/Cache/*
+                    
+# Ignore bank files in the StreamingAssets folder.
+Game/[Aa]ssets/StreamingAssets/**/*.bank
+Game/[Aa]ssets/StreamingAssets/**/*.bank.meta
+                    
+# If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
+# Log files can be ignored.
+fmod_editor.log
